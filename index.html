@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Myportfolio</title>
+    <meta name="description" content="Portfolio Template for Developer" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        emailjs.init("9fyCjxWfefn_qnS4N"); // Your actual public key
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/Govind.png"
+              alt="Ram Maheshwari Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Govind Bairi</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#Certications" class="header__link">
+                Certications
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+             <li class="header__sm-menu-link">
+              <a href="./index.html#Certications"> Certications</a>
+             </li>
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="home-hero" id="bubbleArea">
+      <script>
+        const bubbleArea = document.getElementById('bubbleArea');
+
+        // Function to create bubbles with an image
+        function createBubble(x, y) {
+            const bubble = document.createElement('span');
+            bubble.classList.add('bubble');
+
+            // Randomize size of the bubbles
+            const size = Math.random() * 40 + 30; // Random size between 30px and 70px
+            bubble.style.width = `${size}px`;
+            bubble.style.height = `${size}px`;
+
+            // Set the background image (use your own image URL here)
+            bubble.style.backgroundImage = 'url("your-image.jpg")';
+
+            // Position the bubble where the mouse is
+            bubble.style.left = `${x - size / 2}px`;
+            bubble.style.top = `${y - size / 2}px`;
+
+            // Append the bubble to the bubbleArea
+            bubbleArea.appendChild(bubble);
+
+            // Remove the bubble after animation
+            setTimeout(() => {
+                bubble.remove();
+            }, 3000); // Adjust time if needed
+        }
+
+        // Event listener to create bubbles when the mouse moves over the bubbleArea
+        bubbleArea.addEventListener('mousemove', (e) => {
+            const rect = bubbleArea.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            createBubble(x, y);
+        });
+    </script>
+
+      <div class="home-hero__content">
+        <p class="text-primary">
+                Hi, My name is 
+         </p>
+        <h1 class="heading-primary"> Govind.</h1>
+        <div class="home-hero__info">
+          <h2 class="text-primarys">I'm a 👨🏻‍💻 freelancer </h2>
+        </div>
+        <div class="para">
+          <p>Creative Web Developer and Designer, delivering innovative,
+             high-quality digital <br> solutions tailored to client needs, and
+              a passionate problem-solver.</p>
+        </div>
+        <div class="home-hero__cta">
+          <a href="./#projects" class="btn btn--bg">Projects</a>
+        </div>
+      </div>
+      <div class="home-hero__socials">
+        <div class="home-hero__social">
+            <a href="https://www.linkedin.com/in/govind-bairi-392482224/" class="home-hero__social-icon-link">
+                <img src="./assets/png/linkedin-ico.png" alt="icon" class="home-hero__social-icon" />
+            </a>
+        </div>
+        <div class="home-hero__social">
+            <a href="https://github.com/govindbairi" class="home-hero__social-icon-link">
+                <img src="./assets/png/github-ico.png" alt="icon" class="home-hero__social-icon" />
+            </a>
+        </div>
+        <div class="home-hero__social">
+          <a href="https://leetcode.com/u/govindbairi/" class="home-hero__social-icon-link">
+              <img src="./assets/png/leetcode-ico.png" alt="icon" class="home-hero__social-icon" />
+          </a>
+      </div>
+      <div class="home-hero__social">
+        <a href="https://www.geeksforgeeks.org/user/govindbairi/" class="home-hero__social-icon-link">
+            <img src="./assets/png/gfg-ico.png" alt="icon" class="home-hero__social-icon" />
+        </a>
+    </div>
+        <div class="home-hero__social">
+            <a href="https://www.youtube.com/@govindarao331" class="home-hero__social-icon-link">
+                <img src="./assets/png/yt-ico.png" alt="icon" class="home-hero__social-icon" />
+            </a>
+        </div>
+        <div class="home-hero__social">
+            <a href="https://www.instagram.com/govind_bairi/" class="home-hero__social-icon-link">
+                <img src="./assets/png/insta-ico.png" alt="icon" class="home-hero__social-icon" />
+            </a>
+    </div>
+    
+    
+    
+    </section>
+    <section id="about" class="about sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main">About Me</span>
+          <span class="heading-sec__sub">
+            Hello, I'm Govind Bairi, a third-year Computer Science student at GVP College 
+            and a Fullstack Developer . I've engaged in remote projects for various agencies, 
+            provided consulting for startups, and worked with AWS Cloud and Google AI/ML technologies. 
+           
+
+
+          </span>
+        </h2>
+        <div class="about__content">
+          <div class="about__content-main">
+            <h3 class="about__content-title">Get to know me!</h3>
+            <div class="about__content-details">
+              <p class="about__content-details-para">
+                Hey! It's
+                <strong>Govind Bairi</strong>
+                and I'm a <strong> Fullstack Developer </strong> located in
+               Vizag. 
+                
+                I've engaged in <strong> remote projects</strong>  for various agencies,
+                 provided consulting for startups, and worked with AWS Cloud 
+                 and Google AI/ML technologies, collaborating with diverse teams 
+                 to drive innovative solutions.
+
+
+              
+              </p>
+              <p class="about__content-details-para">
+                I'm a bit of a digital product junky. Over the years, I've used
+                hundreds of web and mobile apps in different industries and
+                verticals. Feel free to
+                <strong>contact</strong> me here.
+              </p>
+            </div>
+            <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
+              >Contact</a
+            >
+          </div>
+          <div class="about__content-skills">
+            <h3 class="about__content-title">My Skills</h3>
+            <div class="skills">
+              <div class="skills__skill">HTML</div>
+              <div class="skills__skill">CSS</div>
+              <div class="skills__skill">JavaScript</div>
+              <div class="skills__skill">C++</div>
+              <div class="skills__skill">Python</div>
+              <div class="skills__skill">Fastapi</div>
+              <div class="skills__skill">Nodejs</div>
+              <div class="skills__skill">Expressjs</div>
+              <div class="skills__skill">Mongodb</div>
+              <div class="skills__skill">Wordpress</div>
+              <div class="skills__skill">Aws S3</div>
+              <div class="skills__skill">Adobe Photoshop</div>
+              <div class="skills__skill">Adobe illustrator</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="projects sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-bg">
+          <span class="heading-sec__main">Projects</span>
+          <span class="heading-sec__sub">
+           During My Diploma and Btech,I have Completed 5+ Projects
+          </span>
+        </h2>
+
+        <div class="projects__content">
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/jpeg/project1.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">GTuber</h3>
+              <p class="projects__row-content-desc">
+                GTuber is a simple web application that allows users to download
+                 YouTube videos quickly by pasting the video link. It supports multiple 
+                 formats and resolutions, making video downloading fast and easy.
+              </p>
+              <a
+                href="https://gtuber-1.onrender.com/"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >Case Study</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/jpeg/project2.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Rama Graphics</h3>
+              <p class="projects__row-content-desc">
+                The project aims to revolutionize the photography and frame design
+                industry by providing a dynamic platform for photographers and customers
+                to connect and collaborate. Rama Graphics enables seamless uploading, buying,
+                and selling of premium templates, including PSDs and JPGs, tailored for various 
+                events like Half-Saree ceremonies, Pre-Wedding shoots, Post-Wedding memories, Haldi rituals,
+                Drone photography, and Baby Birthday shoots.
+              </p>
+              <a
+                href="https://website-com-1.onrender.com/"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >Case Study</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/png/project3.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Project prabhujya</h3>
+              <p class="projects__row-content-desc">
+                Prabhujya is a community project that facilitates the donation of 
+                surplus food to individuals in need through local volunteers. The initiative <br>
+                aims to address food insecurity by ensuring efficient distribution within nearby communities.
+              </p>
+              <a
+                href="./assets/png/project3.png"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >Case Study</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+   <section id="Certications" class="achieveclass">
+  <h1>Certications</h1>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="./assets/png/Cer1.png" alt="Beach 1">
+      <h2 class="p1">This is my first certificate</h2>
+    </div>
+    <div class="gallery-item">
+      <img src="./assets/png/cer2.png" alt="Beach 2">
+      <h2 class="p2">This is my second certificate</h2>
+    </div>
+    <div class="gallery-item">
+      <img src="./assets/png/cer3.png" alt="Beach 3">
+      <h2 class="p3">This is my third certificate</h2>
+    </div>
+    <div class="gallery-item">
+      <img src="./assets/png/cer4.png" alt="Beach 4">
+      <h2 class="p4">This is my fourth certificate</h2>
+    </div>
+  </div>
+</section>
+
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="lightbox image">
+</div>
+
+<script>
+    const images = document.querySelectorAll('.gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    images.forEach(image => {
+        image.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = image.src;
+        });
+    });
+
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+    }
+</script>
+
+    <section id="contact" class="contact sec-pad dynamicBg">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
+          <span class="heading-sec__sub heading-sec__sub--lt">
+            You can contact me directly at 9491496815 or simply fill the beow form.<br>
+             I'd be more than happy to discuss how we can work together to achieve your goals.
+          </span>
+        </h2>
+        <div class="contact__form-container">
+          <form class="contact__form" id="contact-form">
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="name">Name</label>
+              <input
+                required
+                placeholder="Enter Your Name"
+                type="text"
+                class="contact__form-input"
+                name="from_name"
+                id="name"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email">Email</label>
+              <input
+                required
+                placeholder="Enter Your Email"
+                type="email"
+                class="contact__form-input"
+                name="reply_to"
+                id="email"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="message">Message</label>
+              <textarea
+                required
+                cols="30"
+                rows="10"
+                class="contact__form-input"
+                placeholder="Enter Your Message"
+                name="message"
+                id="message"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn--theme contact__btn">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/twitter-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/yt-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon main-footer__icon--mr-none"
+                  src="./assets/png/insta-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Govindbairi</h4>
+            <p class="main-footer__short-desc">
+              Thank you so much for visiting! Your time and interest mean a lot to me. <br>
+              If you have any questions feedback, or just want to chat, please don't <br>hesitate to reach out.
+               I'm here to help and would love to hear from you!
+            </p>
+          </div>
+        </div>
+        <div class="main-footer__lower">
+          &copy; Copyright 2024. Made by
+          <a rel="noreferrer" target="_blank" href="govindbairi142@gmail.com"
+            >Govind Bairi</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
